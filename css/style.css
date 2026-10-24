@@ -641,6 +641,70 @@ button {
   height: 1rem;
 }
 
+/* detalle del evento */
+.detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--flow-gap);
+  padding-block: var(--flow-gap) var(--space-8);
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-gap);
+}
+
+.event-cover {
+  height: 12.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.event-cover img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.event-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.event-heading__tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.event-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.event-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-8);
+}
+
+.event-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-gap);
+}
+
+.event-section__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.event-section__text {
+  color: var(--text-secondary);
+}
+
 /* desktop */
 @media (min-width: 1024px) {
   :root {
@@ -750,6 +814,40 @@ button {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-6);
     padding-bottom: var(--space-12);
+  }
+
+  /* detalle a dos columnas */
+  .detail {
+    grid-template-columns: minmax(0, 1fr) 25rem;
+    gap: var(--space-12);
+    padding-block: var(--space-12);
+  }
+
+  .event-info {
+    gap: var(--space-6);
+  }
+
+  .event-section {
+    gap: var(--space-6);
+  }
+
+  .event-cover {
+    height: 20rem;
+  }
+
+  .event-cover img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .event-heading {
+    gap: var(--space-3);
+  }
+
+  .event-section__title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.4;
   }
 
   /* footer en fila */
