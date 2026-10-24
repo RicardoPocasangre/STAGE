@@ -1064,4 +1064,22 @@ button {
   .chip {
     padding-inline: var(--space-3);
   }
+
+  /* barra de compra fija */
+  .event-title {
+    font-size: 2rem;
+  }
+
+  .purchase {
+    position: sticky;
+    bottom: var(--space-4);
+    z-index: 10;
+    box-shadow: var(--shadow-md);
+  }
+
+  .purchase .btn {
+    flex: 1;
+    max-width: 11.25rem;
+    padding-inline: var(--space-4);
+  }
 }
