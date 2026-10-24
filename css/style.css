@@ -705,6 +705,95 @@ button {
   color: var(--text-secondary);
 }
 
+/* zonas y compra */
+.zones {
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.zone {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "info price"
+    "stock price";
+  align-items: center;
+  column-gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.zone:last-child {
+  border-bottom: 0;
+}
+
+.zone__info {
+  grid-area: info;
+}
+
+.zone__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.zone__desc {
+  display: none;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.zone__stock {
+  grid-area: stock;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.zone__price {
+  grid-area: price;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* barra de compra */
+.purchase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.purchase .price__amount {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.purchase__extra,
+  .purchase__note {
+  display: none;
+}
+
+.purchase__extra {
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-default);
+}
+
+.purchase__note {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
 /* desktop */
 @media (min-width: 1024px) {
   :root {
@@ -848,6 +937,55 @@ button {
     font-size: 1.375rem;
     font-weight: 700;
     line-height: 1.4;
+  }
+
+  /* zonas y compra lateral */
+  .zone {
+    grid-template-columns: 1fr 7.5rem 4.5rem;
+    grid-template-areas: "info stock price";
+    column-gap: var(--space-4);
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .zone__name {
+    font-size: 1rem;
+  }
+
+  .zone__desc {
+    display: block;
+  }
+
+  .zone__stock {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: right;
+  }
+
+  .zone__price {
+    text-align: right;
+  }
+
+  .purchase {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+    flex-direction: column;
+    align-items: stretch;
+    align-self: start;
+    justify-content: flex-start;
+    padding: var(--space-6);
+  }
+
+  .purchase .price__amount {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .purchase__extra {
+    display: flex;
+  }
+
+  .purchase__note {
+    display: block;
   }
 
   /* footer en fila */
