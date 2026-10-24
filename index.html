@@ -50,6 +50,36 @@
   </header>
 
   <main class="page" id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <h1 class="hero__title" id="hero-title">Descubre tu próximo evento</h1>
+        <form class="search" id="buscar" role="search" action="#" method="get">
+          <label class="visually-hidden" for="buscar-evento">Buscar por evento o recinto</label>
+          <div class="search__field">
+            <img src="img/icon-search.png" alt="Lupa de búsqueda" width="20" height="20">
+            <input class="search__input" id="buscar-evento" name="q" type="search" placeholder="Buscar por evento o recinto">
+          </div>
+          <button class="btn btn--outline search__submit" type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="listing" aria-labelledby="listado-titulo">
+      <div class="filters">
+        <div class="chips" role="group" aria-label="Filtrar por categoría">
+          <button class="chip is-active" type="button" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" aria-pressed="false">Conciertos</button>
+          <button class="chip" type="button" aria-pressed="false">Teatro</button>
+          <button class="chip" type="button" aria-pressed="false">Deportes</button>
+        </div>
+        <p class="filters__sort">
+          <img src="img/icon-filter.png" alt="Ícono de filtros" width="16" height="16">
+          Ordenar: fecha más próxima
+        </p>
+      </div>
+
+      <h2 class="listing__title" id="listado-titulo">Próximos eventos</h2>
+    </section>
   </main>
 
   <footer class="site-footer">
