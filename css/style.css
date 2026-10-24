@@ -760,3 +760,16 @@ button {
   }
 }
 
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* listado a 2 columnas */
+  :root {
+    --gutter: 2rem;
+    --flow-gap: 1.5rem;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
