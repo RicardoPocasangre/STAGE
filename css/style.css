@@ -547,6 +547,100 @@ button {
   height: 1rem;
 }
 
+/* tarjetas de evento */
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--flow-gap);
+  order: 4;
+  padding-bottom: var(--space-8);
+}
+
+.event-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.event-card:hover,
+  .event-card:focus-within {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* portadas con degrado */
+.cover {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--indigo-700), var(--rose-600));
+}
+
+.cover--theater {
+  background: linear-gradient(135deg, var(--indigo-950), var(--indigo-500));
+}
+
+.cover--sport {
+  background: linear-gradient(135deg, var(--gray-900), var(--indigo-600));
+}
+
+.event-card__cover {
+  height: 9.5rem;
+}
+
+.event-card__cover img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.event-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.event-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* el link cubre toda la tarjeta */
+.event-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.event-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.event-card__go {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--bg-brand-subtle);
+  border-radius: var(--radius-full);
+}
+
+.event-card__go img {
+  width: 1rem;
+  height: 1rem;
+}
+
 /* desktop */
 @media (min-width: 1024px) {
   :root {
@@ -649,6 +743,13 @@ button {
     order: 3;
     margin: 0 0 var(--space-6);
     font-size: 1.75rem;
+  }
+
+  /* 4 columnas */
+  .event-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    padding-bottom: var(--space-12);
   }
 
   /* footer en fila */
