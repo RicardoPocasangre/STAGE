@@ -389,6 +389,29 @@ button {
   height: 1rem;
 }
 
+/* footer */
+.site-footer {
+  margin-top: auto;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-default);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: min(100% - 2 * var(--gutter), var(--content-max));
+  padding-block: var(--space-6);
+  margin-inline: auto;
+  font-size: 0.875rem;
+}
+
+.site-footer__brand {
+  font-weight: 700;
+  color: var(--text-brand);
+}
+
 /* desktop */
 @media (min-width: 1024px) {
   :root {
@@ -437,6 +460,13 @@ button {
 
   .main-nav__item--mobile {
     display: none;
+  }
+
+  /* footer en fila */
+  .site-footer__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
