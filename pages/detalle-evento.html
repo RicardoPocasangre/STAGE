@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Aurora · STAGE</title>
+  <meta name="description" content="Detalle del evento Festival Aurora: fecha, recinto, zonas y precios de boletos.">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="../index.html" aria-label="STAGE, ir al inicio">
+        <img class="logo__mark" src="../img/logo.png" alt="Logotipo de STAGE" width="40" height="32">
+        <span class="logo__name">STAGE</span>
+      </a>
+
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Mostrar u ocultar el menú de navegación">
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link is-current" href="../index.html">Eventos</a></li>
+          <li><a class="main-nav__link" href="#">Mis boletos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-actions__item header-actions__item--desktop" href="../index.html#buscar">
+          <img src="../img/icon-search-dark.png" alt="Buscar eventos" width="24" height="24">
+        </a>
+        <a class="header-actions__item" href="#">
+          <img src="../img/icon-cart.png" alt="Carrito de compras" width="24" height="24">
+        </a>
+        <a class="user-menu" href="#" aria-label="Mi perfil">
+          <span class="user-menu__avatar">
+            <img src="../img/icon-user.png" alt="Perfil de usuario" width="20" height="20">
+          </span>
+          <img class="user-menu__arrow" src="../img/icon-chevron-down.png" alt="" width="16" height="16">
+        </a>
+        <label class="menu-button" for="menu-toggle">
+          <img src="../img/icon-menu.png" alt="Menú" width="24" height="24">
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="contenido">
+    <div class="detail">
+      <article class="event-info" aria-labelledby="evento-titulo">
+        <div class="event-cover cover">
+          <img src="../img/icon-music.png" alt="Ícono de concierto" width="96" height="96">
+        </div>
+
+        <header class="event-heading">
+          <p class="event-heading__tags">
+            <span class="badge badge--success">Publicado</span>
+            <span class="category">Concierto</span>
+          </p>
+          <h1 class="event-title" id="evento-titulo">Festival Aurora</h1>
+        </header>
+
+        <ul class="event-data" aria-label="Datos del evento">
+          <li class="meta">
+            <img src="../img/icon-calendar.png" alt="Fecha" width="16" height="16">
+            <time datetime="2026-12-12T19:00">Sábado 12 de diciembre · 7:00 p. m.</time>
+          </li>
+          <li class="meta">
+            <img src="../img/icon-pin.png" alt="Lugar" width="16" height="16">
+            Arena Central
+          </li>
+          <li class="meta">
+            <img src="../img/icon-ticket.png" alt="Boleto" width="16" height="16">
+            Puertas abren a las 5:00 p. m.
+          </li>
+        </ul>
+
+        <section class="event-section" aria-labelledby="descripcion-titulo">
+          <h2 class="event-section__title" id="descripcion-titulo">Descripción</h2>
+          <p class="event-section__text">
+            Una noche de música en vivo con artistas invitados, pantallas inmersivas y una puesta en escena
+            pensada para todo el público. Habrá zonas de comida y puntos de hidratación dentro del recinto.
+          </p>
+        </section>
+
+        <section class="event-section" aria-labelledby="zonas-titulo">
+          <h2 class="event-section__title" id="zonas-titulo">Zonas y precios</h2>
+          <ul class="zones">
+            <li class="zone">
+              <div class="zone__info">
+                <h3 class="zone__name">General</h3>
+                <p class="zone__desc">Pista, de pie</p>
+              </div>
+              <p class="zone__stock">320 disponibles</p>
+              <p class="zone__price">$25.00</p>
+            </li>
+            <li class="zone">
+              <div class="zone__info">
+                <h3 class="zone__name">Preferencial</h3>
+                <p class="zone__desc">Gradas con asiento numerado</p>
+              </div>
+              <p class="zone__stock">120 disponibles</p>
+              <p class="zone__price">$45.00</p>
+            </li>
+            <li class="zone">
+              <div class="zone__info">
+                <h3 class="zone__name">VIP</h3>
+                <p class="zone__desc">Palco con servicio de bar</p>
+              </div>
+              <p class="zone__stock">24 disponibles</p>
+              <p class="zone__price">$80.00</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="purchase" aria-labelledby="compra-titulo">
+        <h2 class="visually-hidden" id="compra-titulo">Resumen de compra</h2>
+        <p class="price">
+          <span class="price__label">Desde</span>
+          <span class="price__amount">$25.00</span>
+        </p>
+        <div class="purchase__extra">
+          <p class="meta">
+            <img src="../img/icon-calendar.png" alt="Fecha" width="16" height="16">
+            Sáb 12 dic · 7:00 p. m.
+          </p>
+          <p class="meta">
+            <img src="../img/icon-pin.png" alt="Lugar" width="16" height="16">
+            Arena Central
+          </p>
+        </div>
+        <a class="btn btn--primary" href="#">Comprar boletos</a>
+        <p class="purchase__note">Los cargos por servicio se muestran en el resumen de compra.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__brand">STAGE · Sistema de venta de boletos</p>
+      <p>© 2026 STAGE · Proyecto académico</p>
+    </div>
+  </footer>
+</body>
+</html>
